@@ -313,20 +313,38 @@ img {
   color: var(--color-black);
 }
 
-/* Illustration Grid */
-.illustration-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 240px);
-  grid-template-rows: repeat(3, 240px);
-  gap: 11px 10px;
-  margin: 30px auto 0;
-  width: fit-content;
+/* Illustration Polaroids */
+.illustration-polaroids {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 50px 39px;
+  align-items: center;
+  justify-content: center;
+  width: 1438px;
+  margin-left: -120px;
+  margin-top: 30px;
 }
 
-.illustration-grid img {
-  width: 240px;
-  height: 240px;
+.polaroid-card {
+  flex-shrink: 0;
+  transition: transform 0.3s ease;
+}
+
+.polaroid-inner {
+  background-color: var(--color-white);
+  width: 290px;
+  height: 357px;
+  box-shadow:
+    0px 4px 4px -1px rgba(12, 12, 13, 0.1),
+    0px 4px 4px -1px rgba(12, 12, 13, 0.05);
+  padding: 14px 0 0 13px;
+}
+
+.polaroid-img {
+  width: 263px;
+  height: 263px;
   object-fit: cover;
+  display: block;
 }
 
 .btn-view-more {

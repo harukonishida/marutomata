@@ -89,16 +89,31 @@
             見るだけで気持ちがほぐれるような、ポップでやさしいイラストを描いています。WebサイトやSNSはもちろん、グッズやアイコンなどにもご活用いただけます。
           </p>
         </div>
-        <div class="illustration-grid">
-          <img src="img/illustration_1 1.png" alt="イラスト1">
-          <img src="img/illustration_2 1.png" alt="イラスト2">
-          <img src="img/illustration_3 1.png" alt="イラスト3">
-          <img src="img/illustration_4 1.png" alt="イラスト4">
-          <img src="img/illustration_6 1.png" alt="イラスト6">
-          <img src="img/illustration_9 1.png" alt="イラスト9">
-          <img src="img/illustration_7 1.png" alt="イラスト7">
-          <img src="img/illustration_8 1.png" alt="イラスト8">
-          <img src="img/illustration_5 1.png" alt="イラスト5">
+        <div class="illustration-polaroids">
+          <div class="polaroid-card" style="transform: rotate(3.12deg)">
+            <div class="polaroid-inner"><img src="img/illustration_1 1.png" alt="イラスト1" class="polaroid-img"></div>
+          </div>
+          <div class="polaroid-card" style="transform: rotate(-2.45deg)">
+            <div class="polaroid-inner"><img src="img/illustration_2 1.png" alt="イラスト2" class="polaroid-img"></div>
+          </div>
+          <div class="polaroid-card" style="transform: rotate(-2.68deg)">
+            <div class="polaroid-inner"><img src="img/illustration_3 1.png" alt="イラスト3" class="polaroid-img"></div>
+          </div>
+          <div class="polaroid-card" style="transform: rotate(2.68deg)">
+            <div class="polaroid-inner"><img src="img/illustration_4 1.png" alt="イラスト4" class="polaroid-img"></div>
+          </div>
+          <div class="polaroid-card" style="transform: rotate(-3.15deg)">
+            <div class="polaroid-inner"><img src="img/illustration_6 1.png" alt="イラスト6" class="polaroid-img"></div>
+          </div>
+          <div class="polaroid-card" style="transform: rotate(2.14deg)">
+            <div class="polaroid-inner"><img src="img/illustration_7 1.png" alt="イラスト7" class="polaroid-img"></div>
+          </div>
+          <div class="polaroid-card" style="transform: rotate(-5.15deg)">
+            <div class="polaroid-inner"><img src="img/illustration_5 1.png" alt="イラスト5" class="polaroid-img"></div>
+          </div>
+          <div class="polaroid-card" style="transform: rotate(1.75deg)">
+            <div class="polaroid-inner"><img src="img/illustration_9 1.png" alt="イラスト9" class="polaroid-img"></div>
+          </div>
         </div>
         <a href="#" class="btn-view-more">
           View MORE
@@ -204,5 +219,48 @@
     <p class="footer-copy">Copyright &copy; 2026 marutomata</p>
   </footer>
 
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const cards = document.querySelectorAll('.polaroid-card');
+
+      cards.forEach((card, i) => {
+        // 元の回転を保存
+        card.dataset.baseTransform = card.style.transform;
+
+        // 左右どちらからか（偶数→左、奇数→右）
+        const offsetX = i % 2 === 0 ? '-160px' : '160px';
+        card.style.transition = 'none';
+        card.style.opacity = '0';
+        card.style.transform = card.dataset.baseTransform + ` translateX(${offsetX})`;
+
+        // ホバー：まっすぐ & 上に浮き上がる
+        card.addEventListener('mouseenter', () => {
+          card.style.transition = 'transform 0.3s ease';
+          card.style.transform = 'rotate(0deg) translateY(-20px)';
+        });
+        card.addEventListener('mouseleave', () => {
+          card.style.transition = 'transform 0.3s ease';
+          card.style.transform = card.dataset.baseTransform;
+        });
+      });
+
+      // スクロールで見えたらカードを左右から流し込む
+      const observer = new IntersectionObserver((entries) => {
+        if (!entries[0].isIntersecting) return;
+
+        cards.forEach((card, i) => {
+          setTimeout(() => {
+            card.style.transition = 'transform 0.7s ease, opacity 0.7s ease';
+            card.style.opacity = '1';
+            card.style.transform = card.dataset.baseTransform;
+          }, i * 80);
+        });
+
+        observer.disconnect();
+      }, { threshold: 0.1 });
+
+      observer.observe(document.querySelector('.illustration-polaroids'));
+    });
+  </script>
 </body>
 </html>
