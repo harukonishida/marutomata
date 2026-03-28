@@ -250,10 +250,10 @@
 
         cards.forEach((card, i) => {
           setTimeout(() => {
-            card.style.transition = 'transform 0.7s ease, opacity 0.7s ease';
+            card.style.transition = 'transform 1.4s ease, opacity 1.4s ease';
             card.style.opacity = '1';
             card.style.transform = card.dataset.baseTransform;
-          }, i * 80);
+          }, i * 160);
         });
 
         observer.disconnect();
