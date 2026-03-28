@@ -206,6 +206,10 @@ img {
   background-color: var(--color-pink);
 }
 
+.vertical-chars--regular {
+  font-weight: 400;
+}
+
 .intro-content {
   display: flex;
   flex-direction: column;
@@ -314,7 +318,7 @@ img {
   display: grid;
   grid-template-columns: repeat(3, 240px);
   grid-template-rows: repeat(3, 240px);
-  gap: 10px 10px;
+  gap: 11px 10px;
   margin: 30px auto 0;
   width: fit-content;
 }
@@ -326,7 +330,8 @@ img {
 }
 
 .btn-view-more {
-  display: inline-flex;
+  display: flex;
+  width: fit-content;
   align-items: center;
   gap: 20px;
   background-color: var(--color-pink);
