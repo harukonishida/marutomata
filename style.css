@@ -899,12 +899,16 @@ img {
   }
 
   .br-mobile {
-    display: none;
+    display: inline;
+  }
+
+  .contact-info .info-row:last-child {
+    align-items: flex-end;
   }
 
   .instagram-icon-lg {
-    width: 57px;
-    height: 57px;
+    width: 25px;
+    height: 25px;
   }
 
   .btn-request {
