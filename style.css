@@ -61,7 +61,7 @@ img {
 .logo {
   font-family: 'Gothic A1', sans-serif;
   font-weight: 700;
-  font-size: 24px;
+  font-size: 26px;
   color: var(--color-dark);
   line-height: 1.25;
 }
@@ -81,10 +81,10 @@ img {
 .nav-links a {
   font-family: 'Gothic A1', 'Noto Sans JP', sans-serif;
   font-weight: 400;
-  font-size: 18px;
+  font-size: 20px;
   color: var(--color-dark);
   white-space: nowrap;
-  line-height: 18px;
+  line-height: 20px;
   transition: opacity 0.2s;
 }
 
@@ -103,8 +103,8 @@ img {
   border-radius: 100px;
   font-family: 'Gothic A1', 'Noto Sans JP', sans-serif;
   font-weight: 700;
-  font-size: 18px;
-  line-height: 18px;
+  font-size: 20px;
+  line-height: 20px;
   white-space: nowrap;
   transition: opacity 0.2s;
 }
@@ -150,8 +150,8 @@ img {
 .firstview-title {
   font-family: 'Gothic A1', 'Noto Sans JP', sans-serif;
   font-weight: 700;
-  font-size: 72px;
-  line-height: 90px;
+  font-size: 80px;
+  line-height: 100px;
   color: var(--color-white);
   text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.05);
   max-width: 719px;
@@ -160,8 +160,8 @@ img {
 .firstview-desc {
   font-family: 'Gothic A1', 'Noto Sans JP', sans-serif;
   font-weight: 400;
-  font-size: 18px;
-  line-height: 27px;
+  font-size: 20px;
+  line-height: 30px;
   color: var(--color-white);
   text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.05);
   white-space: nowrap;
@@ -194,7 +194,7 @@ img {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  font-size: 24px;
+  font-size: 28px;
   color: var(--color-black);
   font-family: 'Gothic A1', 'Noto Sans JP', sans-serif;
   font-weight: 700;
@@ -231,16 +231,16 @@ img {
 .intro-title {
   font-family: 'Gothic A1', sans-serif;
   font-weight: 500;
-  font-size: 32px;
+  font-size: 36px;
   color: var(--color-black);
-  line-height: 35px;
+  line-height: 42px;
 }
 
 .intro-text {
   font-family: 'Gothic A1', 'Noto Sans JP', sans-serif;
   font-weight: 400;
-  font-size: 16px;
-  line-height: 30px;
+  font-size: 18px;
+  line-height: 34px;
   color: var(--color-black);
 }
 
@@ -280,7 +280,7 @@ img {
 .section-title-text {
   font-family: 'Gothic A1', 'Noto Sans JP', sans-serif;
   font-weight: 700;
-  font-size: 24px;
+  font-size: 28px;
   color: var(--color-black);
   line-height: normal;
 }
@@ -302,7 +302,7 @@ img {
 
 .service-number {
   font-family: 'Molengo', sans-serif;
-  font-size: 32px;
+  font-size: 36px;
   color: var(--color-pink);
   line-height: normal;
 }
@@ -310,7 +310,7 @@ img {
 .service-title {
   font-family: 'Gothic A1', 'Noto Sans JP', sans-serif;
   font-weight: 400;
-  font-size: 24px;
+  font-size: 28px;
   color: var(--color-black);
   line-height: normal;
 }
@@ -318,8 +318,8 @@ img {
 .service-desc {
   font-family: 'Gothic A1', 'Noto Sans JP', sans-serif;
   font-weight: 400;
-  font-size: 16px;
-  line-height: 30px;
+  font-size: 18px;
+  line-height: 34px;
   color: var(--color-black);
 }
 
@@ -349,7 +349,10 @@ img {
   box-shadow:
     0px 4px 4px -1px rgba(12, 12, 13, 0.1),
     0px 4px 4px -1px rgba(12, 12, 13, 0.05);
-  padding: 15px 0 0 14px;
+  padding: 15px 0 0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
 }
 
 .polaroid-img {
@@ -371,8 +374,8 @@ img {
   padding: 15px 0;
   font-family: 'Gothic A1', 'Noto Sans JP', sans-serif;
   font-weight: 700;
-  font-size: 18px;
-  line-height: 18px;
+  font-size: 20px;
+  line-height: 20px;
   margin: 30px auto 0;
   transition: opacity 0.2s;
 }
@@ -444,7 +447,7 @@ img {
 .info-value span {
   font-family: 'Gothic A1', 'Noto Sans JP', sans-serif;
   font-weight: 400;
-  font-size: 16px;
+  font-size: 18px;
   color: var(--color-black);
   line-height: normal;
   white-space: nowrap;
@@ -492,7 +495,7 @@ img {
 
 .sns-label {
   font-family: 'Molengo', sans-serif;
-  font-size: 18px;
+  font-size: 20px;
   color: var(--color-pink);
   line-height: normal;
 }
@@ -508,8 +511,8 @@ img {
   border-radius: 100px;
   font-family: 'Gothic A1', 'Noto Sans JP', sans-serif;
   font-weight: 700;
-  font-size: 18px;
-  line-height: 18px;
+  font-size: 20px;
+  line-height: 20px;
   white-space: nowrap;
   transition: opacity 0.2s;
 }
@@ -521,7 +524,7 @@ img {
 .coconala-note {
   font-family: 'Gothic A1', 'Noto Sans JP', sans-serif;
   font-weight: 400;
-  font-size: 12px;
+  font-size: 14px;
   color: var(--color-black);
   text-align: center;
   line-height: normal;
@@ -644,9 +647,9 @@ img {
 .footer-copy {
   font-family: 'DM Sans', sans-serif;
   font-weight: 400;
-  font-size: 18px;
+  font-size: 20px;
   color: var(--color-dark);
-  line-height: 18px;
+  line-height: 20px;
 }
 
 /* =====================
@@ -790,7 +793,10 @@ img {
     width: 100%;
     aspect-ratio: 290 / 357;
     height: auto;
-    padding: 4.8% 0 0 4.5%;
+    padding: 4.8% 0 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
   }
 
   .polaroid-img {
