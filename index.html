@@ -21,9 +21,32 @@
           <a href="#contact">事業者情報</a>
         </div>
         <a href="#contact" class="btn-primary">お問い合わせ</a>
+        <button class="hamburger" id="hamburgerBtn" aria-label="メニューを開く">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
       </nav>
     </div>
   </header>
+
+  <!-- Mobile Nav Overlay (mobile_nav_open) -->
+  <div class="mobile-nav" id="mobileNav">
+    <div class="mobile-nav-header">
+      <div class="logo">まるとまた</div>
+      <button class="mobile-nav-close-btn" id="mobileNavClose" aria-label="メニューを閉じる">
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <nav class="mobile-nav-links">
+      <a href="#introduction">ご挨拶</a>
+      <a href="#services">サービス内容</a>
+      <a href="#works">制作実績</a>
+      <a href="#contact">事業者情報</a>
+    </nav>
+    <a href="#contact" class="btn-primary">お問い合わせ</a>
+  </div>
 
   <!-- First View -->
   <section class="firstview">
@@ -32,11 +55,14 @@
       class="firstview-bg"
       alt=""
     > -->
-    <img
-      src="img/firstview.png"
-      class="firstview-bg"
-      alt=""
-    >
+    <picture>
+      <source media="(max-width: 600px)" srcset="img/firstview_responsive.png">
+      <img
+        src="img/firstview.png"
+        class="firstview-bg"
+        alt=""
+      >
+    </picture>
     <div class="firstview-inner">
       <h1 class="firstview-title">3Dイラストと、<br>WEBサイト制作。</h1>
       <p class="firstview-desc">
@@ -89,20 +115,35 @@
             見るだけで気持ちがほぐれるような、ポップでやさしいイラストを描いています。WebサイトやSNSはもちろん、グッズやアイコンなどにもご活用いただけます。
           </p>
         </div>
-        <div class="illustration-grid">
-          <img src="img/illustration_1 1.png" alt="イラスト1">
-          <img src="img/illustration_2 1.png" alt="イラスト2">
-          <img src="img/illustration_3 1.png" alt="イラスト3">
-          <img src="img/illustration_4 1.png" alt="イラスト4">
-          <img src="img/illustration_6 1.png" alt="イラスト6">
-          <img src="img/illustration_9 1.png" alt="イラスト9">
-          <img src="img/illustration_7 1.png" alt="イラスト7">
-          <img src="img/illustration_8 1.png" alt="イラスト8">
-          <img src="img/illustration_5 1.png" alt="イラスト5">
-        </div>
+        <ul class="illustration-polaroids">
+          <li class="polaroid-card" style="transform: rotate(3.12deg)">
+            <div class="polaroid-inner"><img src="img/illustration_1 1.png" alt="イラスト1" class="polaroid-img"></div>
+          </li>
+          <li class="polaroid-card" style="transform: rotate(-2.45deg)">
+            <div class="polaroid-inner"><img src="img/illustration_2 1.png" alt="イラスト2" class="polaroid-img"></div>
+          </li>
+          <li class="polaroid-card" style="transform: rotate(-2.68deg)">
+            <div class="polaroid-inner"><img src="img/illustration_3 1.png" alt="イラスト3" class="polaroid-img"></div>
+          </li>
+          <li class="polaroid-card" style="transform: rotate(2.68deg)">
+            <div class="polaroid-inner"><img src="img/illustration_4 1.png" alt="イラスト4" class="polaroid-img"></div>
+          </li>
+          <li class="polaroid-card" style="transform: rotate(-3.15deg)">
+            <div class="polaroid-inner"><img src="img/illustration_6 1.png" alt="イラスト6" class="polaroid-img"></div>
+          </li>
+          <li class="polaroid-card" style="transform: rotate(2.14deg)">
+            <div class="polaroid-inner"><img src="img/illustration_7 1.png" alt="イラスト7" class="polaroid-img"></div>
+          </li>
+          <li class="polaroid-card" style="transform: rotate(-5.15deg)">
+            <div class="polaroid-inner"><img src="img/illustration_5 1.png" alt="イラスト5" class="polaroid-img"></div>
+          </li>
+          <li class="polaroid-card" style="transform: rotate(1.75deg)">
+            <div class="polaroid-inner"><img src="img/illustration_9 1.png" alt="イラスト9" class="polaroid-img"></div>
+          </li>
+        </ul>
         <a href="#" class="btn-view-more">
           View MORE
-          <img src="img/Instagram.png" alt="Instagram" class="instagram-icon-sm">
+          <img src="img/Instagram.svg" alt="Instagram" class="instagram-icon-sm">
         </a>
       </div>
 
@@ -137,64 +178,68 @@
   <section id="contact" class="contact">
     <div class="contact-card">
       <div class="contact-inner">
-        <div class="vertical-label">
-          <div class="vertical-chars vertical-chars--regular">
-            <span>事</span><span>業</span><span>者</span><span>情</span><span>報</span>
+        <div class="contact-inner-group">
+          <div class="vertical-label">
+            <div class="vertical-chars vertical-chars--regular">
+              <span>事</span><span>業</span><span>者</span><span>情</span><span>報</span>
+            </div>
+            <div class="vertical-line vertical-line--pink"></div>
           </div>
-          <div class="vertical-line vertical-line--pink"></div>
+          <div class="contact-info">
+            <div class="info-row">
+              <div class="info-label">
+                <span>事業者名</span>
+                <div class="info-label-line"></div>
+              </div>
+              <div class="info-value">
+                <span>まるとまた</span>
+                <div class="info-value-line"></div>
+              </div>
+            </div>
+            <div class="info-row">
+              <div class="info-label">
+                <span>代表者名</span>
+                <div class="info-label-line"></div>
+              </div>
+              <div class="info-value">
+                <span>西田温子</span>
+                <div class="info-value-line"></div>
+              </div>
+            </div>
+            <div class="info-row">
+              <div class="info-label">
+                <span>開業日</span>
+                <div class="info-label-line"></div>
+              </div>
+              <div class="info-value">
+                <span>2026年4月</span>
+                <div class="info-value-line"></div>
+              </div>
+            </div>
+            <div class="info-row">
+              <div class="info-label">
+                <span>事業内容</span>
+                <div class="info-label-line"></div>
+              </div>
+              <div class="info-value">
+                <span>3Dイラスト制作・<br class="br-mobile">Webデザイン/開発</span>
+                <div class="info-value-line"></div>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="contact-info">
-          <div class="info-row">
-            <div class="info-label">
-              <span>事業者名</span>
-              <div class="info-label-line"></div>
-            </div>
-            <div class="info-value">
-              <span>まるとまた</span>
-              <div class="info-value-line"></div>
-            </div>
-          </div>
-          <div class="info-row">
-            <div class="info-label">
-              <span>代表者名</span>
-              <div class="info-label-line"></div>
-            </div>
-            <div class="info-value">
-              <span>西田温子</span>
-              <div class="info-value-line"></div>
-            </div>
-          </div>
-          <div class="info-row">
-            <div class="info-label">
-              <span>開業</span>
-              <div class="info-label-line"></div>
-            </div>
-            <div class="info-value">
-              <span>2026年4月</span>
-              <div class="info-value-line"></div>
-            </div>
-          </div>
-          <div class="info-row">
-            <div class="info-label">
-              <span>事業内容</span>
-              <div class="info-label-line"></div>
-            </div>
-            <div class="info-value">
-              <span>3Dイラスト制作・Webデザイン/開発</span>
-              <div class="info-value-line"></div>
-            </div>
-          </div>
-          <div class="sns-row">
-            <img
-              src="img/Instagram.png"
-              alt="Instagram"
-              class="instagram-icon-lg"
-            >
-            <span class="sns-label">Instagram</span>
-          </div>
-          <a href="#" class="btn-request">お仕事のご依頼はこちら</a>
-          <p class="coconala-note">※外部サイト「ココナラ」に遷移します</p>
-        </div>
+      </div>
+      <div class="contact-actions">
+        <a href="#" class="btn-request">お仕事のご依頼はこちら</a>
+        <p class="coconala-note">※外部サイト「ココナラ」に遷移します</p>
+      </div>
+      <div class="sns-row">
+        <img
+          src="img/Instagram_pink.svg"
+          alt="Instagram"
+          class="instagram-icon-lg"
+        >
+        <span class="sns-label">Instagram</span>
       </div>
     </div>
   </section>
@@ -204,5 +249,62 @@
     <p class="footer-copy">Copyright &copy; 2026 marutomata</p>
   </footer>
 
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+
+      // ── ハンバーガーメニュー ──────────────────────────────
+      const hamburgerBtn   = document.getElementById('hamburgerBtn');
+      const mobileNav      = document.getElementById('mobileNav');
+      const mobileNavClose = document.getElementById('mobileNavClose');
+
+      const openNav  = () => { mobileNav.classList.add('is-open');    document.body.style.overflow = 'hidden'; };
+      const closeNav = () => { mobileNav.classList.remove('is-open'); document.body.style.overflow = ''; };
+
+      hamburgerBtn.addEventListener('click', openNav);
+      mobileNavClose.addEventListener('click', closeNav);
+      mobileNav.querySelectorAll('a').forEach(link => link.addEventListener('click', closeNav));
+
+      // ── ポラロイドカード ──────────────────────────────────
+      const cards = document.querySelectorAll('.polaroid-card');
+
+      cards.forEach((card, i) => {
+        // 元の回転を保存
+        card.dataset.baseTransform = card.style.transform;
+
+        // 左右どちらからか（偶数→左、奇数→右）
+        const offsetX = i % 2 === 0 ? '-160px' : '160px';
+        card.style.transition = 'none';
+        card.style.opacity = '0';
+        card.style.transform = card.dataset.baseTransform + ` translateX(${offsetX})`;
+
+        // ホバー：まっすぐ & 上に浮き上がる
+        card.addEventListener('mouseenter', () => {
+          card.style.transition = 'transform 0.3s ease';
+          card.style.transform = 'rotate(0deg) translateY(-20px)';
+        });
+        card.addEventListener('mouseleave', () => {
+          card.style.transition = 'transform 0.3s ease';
+          card.style.transform = card.dataset.baseTransform;
+        });
+      });
+
+      // スクロールで見えたらカードを左右から流し込む
+      const observer = new IntersectionObserver((entries) => {
+        if (!entries[0].isIntersecting) return;
+
+        cards.forEach((card, i) => {
+          setTimeout(() => {
+            card.style.transition = 'transform 1.4s ease, opacity 1.4s ease';
+            card.style.opacity = '1';
+            card.style.transform = card.dataset.baseTransform;
+          }, i * 160);
+        });
+
+        observer.disconnect();
+      }, { threshold: 0.1 });
+
+      observer.observe(document.querySelector('.illustration-polaroids'));
+    });
+  </script>
 </body>
 </html>
