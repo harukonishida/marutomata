@@ -637,7 +637,7 @@ img {
 /* =====================
    Responsive ≤ 430px
    ===================== */
-@media (max-width: 430px) {
+@media (max-width: 600px) {
 
   body {
     min-width: 0;
