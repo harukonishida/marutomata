@@ -113,6 +113,10 @@ img {
   opacity: 0.85;
 }
 
+.nav .btn-primary {
+  width: 230px;
+}
+
 /* =====================
    First View
    ===================== */
@@ -210,6 +214,10 @@ img {
 
 .vertical-chars--regular {
   font-weight: 400;
+}
+
+.br-mobile {
+  display: none;
 }
 
 .intro-content {
@@ -325,6 +333,8 @@ img {
   width: 1438px;
   margin-left: -120px;
   margin-top: 30px;
+  list-style: none;
+  padding: 0;
 }
 
 .polaroid-card {
@@ -372,8 +382,8 @@ img {
 }
 
 .instagram-icon-sm {
-  width: 25px;
-  height: 25px;
+  width: 23px;
+  height: 23px;
 }
 
 /* =====================
@@ -397,6 +407,11 @@ img {
 }
 
 .contact-inner {
+  display: flex;
+  align-items: flex-start;
+}
+
+.contact-inner-group {
   display: flex;
   gap: 70px;
   align-items: flex-start;
@@ -471,8 +486,8 @@ img {
 }
 
 .instagram-icon-lg {
-  width: 57px;
-  height: 57px;
+  width: 23px;
+  height: 23px;
 }
 
 .sns-label {
@@ -703,10 +718,15 @@ img {
     gap: 15px;
   }
 
+  .br-mobile {
+    display: inline;
+  }
+
   .intro-content {
     padding-top: 0;
     max-width: 318px;
     gap: 16px;
+    margin-top: 60px;
   }
 
   .intro-title {
@@ -760,7 +780,7 @@ img {
   .illustration-polaroids {
     width: 100%;
     margin-left: 0;
-    gap: 20px 19px;
+    gap: 50px;
     margin-top: 20px;
   }
 
@@ -800,19 +820,31 @@ img {
   }
 
   .contact-inner {
-    flex-direction: column;
-    gap: 20px;
-    padding: 0 20px;
+    display: flex;
+    justify-content: center;
+    padding: 0 40px;
+    width: 100%;
+  }
+
+  .contact-inner-group {
+    display: flex;
+    gap: 0;
+    align-items: flex-start;
+    justify-content: center;
+    width: 100%;
   }
 
   .contact-info {
-    width: 305px;
-    padding-top: 0;
+    width: 80%;
+    max-width: 100%;
+    padding: 40px 30px 0;
     gap: 16px;
+    margin-top: 60px;
   }
 
   .info-row {
     height: auto;
+    align-items: flex-end;
   }
 
   .info-label {
@@ -821,16 +853,17 @@ img {
   }
 
   .info-label-line {
-    width: 72px;
+    width: 100%;
   }
 
   .info-value {
+    flex: 1;
     margin-left: 12px;
     padding-top: 0;
   }
 
   .info-value-line {
-    width: 200px;
+    width: 100%;
   }
 
   .instagram-icon-lg {
