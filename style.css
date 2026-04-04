@@ -699,7 +699,7 @@ img {
   }
 
   .firstview-title {
-    font-size: 40px;
+    font-size: 36px;
     line-height: 60px;
     max-width: 100%;
   }
@@ -875,7 +875,7 @@ img {
   .info-row {
     height: auto;
     min-height: 32px;
-    align-items: flex-start;
+    align-items: flex-end;
   }
 
   .info-label {
@@ -900,10 +900,6 @@ img {
 
   .br-mobile {
     display: inline;
-  }
-
-  .contact-info .info-row:last-child {
-    align-items: flex-end;
   }
 
   .instagram-icon-lg {
