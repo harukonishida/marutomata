@@ -694,12 +694,12 @@ img {
 
   /* --- Introduction --- */
   .introduction {
-    padding: 44px 30px;
+    padding: 60px;
   }
 
   .section-container {
     flex-direction: row;
-    justify-content: flex-start;
+    justify-content: center;
     gap: 15px;
   }
 
@@ -721,7 +721,7 @@ img {
 
   /* --- Services --- */
   .services {
-    padding: 0 20px 44px;
+    padding: 60px;
   }
 
   .services-inner {
@@ -787,6 +787,10 @@ img {
   }
 
   /* --- Contact --- */
+  .contact {
+    padding: 60px 0;
+  }
+
   .contact-card {
     margin: 0 14px;
     border-radius: 29px;
