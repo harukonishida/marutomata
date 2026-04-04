@@ -21,9 +21,32 @@
           <a href="#contact">事業者情報</a>
         </div>
         <a href="#contact" class="btn-primary">お問い合わせ</a>
+        <button class="hamburger" id="hamburgerBtn" aria-label="メニューを開く">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
       </nav>
     </div>
   </header>
+
+  <!-- Mobile Nav Overlay (mobile_nav_open) -->
+  <div class="mobile-nav" id="mobileNav">
+    <div class="mobile-nav-header">
+      <div class="logo">まるとまた</div>
+      <button class="mobile-nav-close-btn" id="mobileNavClose" aria-label="メニューを閉じる">
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <nav class="mobile-nav-links">
+      <a href="#introduction">ご挨拶</a>
+      <a href="#services">サービス内容</a>
+      <a href="#works">制作実績</a>
+      <a href="#contact">事業者情報</a>
+    </nav>
+    <a href="#contact" class="btn-primary">お問い合わせ</a>
+  </div>
 
   <!-- First View -->
   <section class="firstview">
@@ -221,6 +244,20 @@
 
   <script>
     document.addEventListener('DOMContentLoaded', () => {
+
+      // ── ハンバーガーメニュー ──────────────────────────────
+      const hamburgerBtn   = document.getElementById('hamburgerBtn');
+      const mobileNav      = document.getElementById('mobileNav');
+      const mobileNavClose = document.getElementById('mobileNavClose');
+
+      const openNav  = () => { mobileNav.classList.add('is-open');    document.body.style.overflow = 'hidden'; };
+      const closeNav = () => { mobileNav.classList.remove('is-open'); document.body.style.overflow = ''; };
+
+      hamburgerBtn.addEventListener('click', openNav);
+      mobileNavClose.addEventListener('click', closeNav);
+      mobileNav.querySelectorAll('a').forEach(link => link.addEventListener('click', closeNav));
+
+      // ── ポラロイドカード ──────────────────────────────────
       const cards = document.querySelectorAll('.polaroid-card');
 
       cards.forEach((card, i) => {

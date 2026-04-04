@@ -503,6 +503,112 @@ img {
 }
 
 /* =====================
+   Hamburger Button
+   ===================== */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 26px;
+  height: 18px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  flex-shrink: 0;
+}
+
+.hamburger span {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: var(--color-dark);
+  border-radius: 2px;
+}
+
+/* =====================
+   Mobile Nav (mobile_nav_open)
+   ===================== */
+.mobile-nav {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 300;
+  background-color: var(--color-bg);
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 48px;
+  padding: 80px 32px 48px;
+}
+
+.mobile-nav.is-open {
+  display: flex;
+}
+
+.mobile-nav-header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  height: 56px;
+}
+
+.mobile-nav-links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+}
+
+.mobile-nav-links a {
+  font-family: 'Gothic A1', 'Noto Sans JP', sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  color: var(--color-dark);
+  text-decoration: none;
+  transition: opacity 0.2s;
+}
+
+.mobile-nav-links a:hover {
+  opacity: 0.7;
+}
+
+/* × ボタン */
+.mobile-nav-close-btn {
+  position: relative;
+  width: 32px;
+  height: 32px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  flex-shrink: 0;
+}
+
+.mobile-nav-close-btn span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 22px;
+  height: 2px;
+  background-color: var(--color-dark);
+  border-radius: 2px;
+}
+
+.mobile-nav-close-btn span:first-child {
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.mobile-nav-close-btn span:last-child {
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+/* =====================
    Footer
    ===================== */
 .footer {
@@ -516,4 +622,243 @@ img {
   font-size: 18px;
   color: var(--color-dark);
   line-height: 18px;
+}
+
+/* =====================
+   Responsive ≤ 430px
+   ===================== */
+@media (max-width: 430px) {
+
+  body {
+    min-width: 0;
+    overflow-x: hidden;
+  }
+
+  /* --- Header --- */
+  .header {
+    position: sticky;
+    top: 0;
+    z-index: 200;
+    background-color: var(--color-bg);
+    padding: 0;
+  }
+
+  .header-inner {
+    padding: 0 20px;
+    height: 56px;
+  }
+
+  .nav-links,
+  .nav > .btn-primary {
+    display: none;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  /* --- First View --- */
+  .firstview {
+    margin: 0 16px;
+    height: auto;
+    min-height: 260px;
+    border-radius: 0 0 36px 36px;
+  }
+
+  .firstview-inner {
+    padding: 32px 24px 40px;
+    justify-content: flex-end;
+    gap: 10px;
+  }
+
+  .firstview-title {
+    font-size: 32px;
+    line-height: 44px;
+    max-width: 100%;
+  }
+
+  .firstview-desc {
+    font-size: 12px;
+    line-height: 20px;
+    white-space: normal;
+  }
+
+  /* --- Introduction --- */
+  .introduction {
+    padding: 44px 20px;
+  }
+
+  .section-container {
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 16px;
+  }
+
+  .vertical-label {
+    flex-direction: row;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .vertical-chars {
+    flex-direction: row;
+    font-size: 18px;
+  }
+
+  .vertical-line {
+    width: 36px;
+    height: 3px;
+  }
+
+  .intro-content {
+    padding-top: 0;
+    max-width: 100%;
+    gap: 16px;
+  }
+
+  .intro-title {
+    font-size: 22px;
+    line-height: 30px;
+  }
+
+  .intro-text {
+    font-size: 14px;
+    line-height: 26px;
+  }
+
+  /* --- Services --- */
+  .services {
+    padding: 0 20px 44px;
+  }
+
+  .services-inner {
+    max-width: 100%;
+    align-items: stretch;
+    gap: 44px;
+  }
+
+  .service-heading-area {
+    margin-bottom: 28px;
+  }
+
+  .section-title-text {
+    font-size: 20px;
+  }
+
+  .service-text-area {
+    width: 100%;
+    margin: 0;
+  }
+
+  .service-number {
+    font-size: 24px;
+  }
+
+  .service-title {
+    font-size: 18px;
+  }
+
+  .service-desc {
+    font-size: 14px;
+    line-height: 26px;
+  }
+
+  /* ポラロイド — 2列 */
+  .illustration-polaroids {
+    width: calc(100% + 40px);
+    margin-left: -20px;
+    gap: 20px 14px;
+  }
+
+  .polaroid-inner {
+    width: 168px;
+    height: 212px;
+  }
+
+  .polaroid-img {
+    width: 146px;
+    height: 146px;
+  }
+
+  .btn-view-more {
+    padding: 12px 28px;
+    font-size: 15px;
+    gap: 10px;
+  }
+
+  .instagram-icon-sm {
+    width: 20px;
+    height: 20px;
+  }
+
+  /* --- Contact --- */
+  .contact-card {
+    margin: 0 16px;
+    border-radius: 36px;
+    padding: 36px 0 40px;
+    min-height: auto;
+  }
+
+  .contact-inner {
+    flex-direction: column;
+    gap: 20px;
+    padding: 0 20px;
+  }
+
+  .contact-info {
+    width: 100%;
+    padding-top: 0;
+    gap: 16px;
+  }
+
+  .info-row {
+    height: auto;
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  .info-label {
+    width: auto;
+    padding-top: 0;
+  }
+
+  .info-label-line {
+    display: none;
+  }
+
+  .info-value {
+    margin-left: 0;
+    padding-top: 0;
+  }
+
+  .info-value-line {
+    width: 100%;
+  }
+
+  .sns-row {
+    margin-top: 4px;
+  }
+
+  .instagram-icon-lg {
+    width: 44px;
+    height: 44px;
+  }
+
+  .btn-request {
+    padding: 12px 32px;
+    font-size: 15px;
+  }
+
+  .coconala-note {
+    font-size: 11px;
+  }
+
+  /* --- Footer --- */
+  .footer {
+    padding: 20px;
+  }
+
+  .footer-copy {
+    font-size: 14px;
+  }
 }
