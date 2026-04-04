@@ -96,7 +96,8 @@ img {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 15px 60px;
+  width: 230px;
+  padding: 15px 0;
   background-color: var(--color-pink);
   color: var(--color-white);
   border-radius: 100px;
@@ -350,13 +351,14 @@ img {
 
 .btn-view-more {
   display: flex;
-  width: fit-content;
+  width: 230px;
   align-items: center;
+  justify-content: center;
   gap: 20px;
   background-color: var(--color-pink);
   color: var(--color-white);
   border-radius: 100px;
-  padding: 15px 60px;
+  padding: 15px 0;
   font-family: 'Gothic A1', 'Noto Sans JP', sans-serif;
   font-weight: 700;
   font-size: 18px;
@@ -388,13 +390,16 @@ img {
   margin: 0 121px;
   padding: 86px 0 100px;
   min-height: 637px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 48px;
 }
 
 .contact-inner {
   display: flex;
   gap: 70px;
   align-items: flex-start;
-  padding: 0 206px;
 }
 
 .contact-info {
@@ -452,11 +457,17 @@ img {
   margin-top: 2px;
 }
 
+.contact-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
 .sns-row {
   display: flex;
   align-items: center;
   gap: 12px;
-  margin-top: 10px;
 }
 
 .instagram-icon-lg {
@@ -475,18 +486,17 @@ img {
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  width: 230px;
+  padding: 15px 0;
   background-color: var(--color-pink);
   color: var(--color-white);
   border-radius: 100px;
-  padding: 15px 90px;
   font-family: 'Gothic A1', 'Noto Sans JP', sans-serif;
   font-weight: 700;
   font-size: 18px;
   line-height: 18px;
   white-space: nowrap;
   transition: opacity 0.2s;
-  align-self: center;
-  margin-top: 10px;
 }
 
 .btn-request:hover {
@@ -660,20 +670,19 @@ img {
   /* --- First View --- */
   .firstview {
     margin: 0 16px;
-    height: auto;
-    min-height: 260px;
-    border-radius: 0 0 36px 36px;
+    height: 608px;
+    border-radius: 0 0 18px 18px;
   }
 
   .firstview-inner {
-    padding: 32px 24px 40px;
+    padding: 53px 25px;
     justify-content: flex-end;
-    gap: 10px;
+    gap: 16px;
   }
 
   .firstview-title {
-    font-size: 32px;
-    line-height: 44px;
+    font-size: 40px;
+    line-height: 60px;
     max-width: 100%;
   }
 
@@ -685,34 +694,18 @@ img {
 
   /* --- Introduction --- */
   .introduction {
-    padding: 44px 20px;
+    padding: 44px 30px;
   }
 
   .section-container {
-    flex-direction: column;
+    flex-direction: row;
     justify-content: flex-start;
-    gap: 16px;
-  }
-
-  .vertical-label {
-    flex-direction: row;
-    align-items: center;
-    gap: 12px;
-  }
-
-  .vertical-chars {
-    flex-direction: row;
-    font-size: 18px;
-  }
-
-  .vertical-line {
-    width: 36px;
-    height: 3px;
+    gap: 15px;
   }
 
   .intro-content {
     padding-top: 0;
-    max-width: 100%;
+    max-width: 318px;
     gap: 16px;
   }
 
@@ -734,7 +727,7 @@ img {
   .services-inner {
     max-width: 100%;
     align-items: stretch;
-    gap: 44px;
+    gap: 60px;
   }
 
   .service-heading-area {
@@ -763,25 +756,27 @@ img {
     line-height: 26px;
   }
 
-  /* ポラロイド — 2列 */
+  /* ポラロイド */
   .illustration-polaroids {
-    width: calc(100% + 40px);
-    margin-left: -20px;
-    gap: 20px 14px;
+    width: 100%;
+    margin-left: 0;
+    gap: 20px 19px;
+    margin-top: 20px;
   }
 
   .polaroid-inner {
-    width: 168px;
-    height: 212px;
+    width: 182px;
+    height: 224px;
+    padding: 9px 0 0 8px;
   }
 
   .polaroid-img {
-    width: 146px;
-    height: 146px;
+    width: 165px;
+    height: 165px;
   }
 
   .btn-view-more {
-    padding: 12px 28px;
+    width: 230px;
     font-size: 15px;
     gap: 10px;
   }
@@ -793,10 +788,11 @@ img {
 
   /* --- Contact --- */
   .contact-card {
-    margin: 0 16px;
-    border-radius: 36px;
-    padding: 36px 0 40px;
+    margin: 0 14px;
+    border-radius: 29px;
+    padding: 55px 0 38px;
     min-height: auto;
+    gap: 33px;
   }
 
   .contact-inner {
@@ -806,37 +802,31 @@ img {
   }
 
   .contact-info {
-    width: 100%;
+    width: 305px;
     padding-top: 0;
     gap: 16px;
   }
 
   .info-row {
     height: auto;
-    flex-direction: column;
-    gap: 2px;
   }
 
   .info-label {
-    width: auto;
+    width: 72px;
     padding-top: 0;
   }
 
   .info-label-line {
-    display: none;
+    width: 72px;
   }
 
   .info-value {
-    margin-left: 0;
+    margin-left: 12px;
     padding-top: 0;
   }
 
   .info-value-line {
-    width: 100%;
-  }
-
-  .sns-row {
-    margin-top: 4px;
+    width: 200px;
   }
 
   .instagram-icon-lg {
@@ -845,8 +835,7 @@ img {
   }
 
   .btn-request {
-    padding: 12px 32px;
-    font-size: 15px;
+    width: 230px;
   }
 
   .coconala-note {
